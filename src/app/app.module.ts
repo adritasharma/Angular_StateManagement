@@ -1,14 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {StoreModule} from '@ngrx/store';
 import { AppComponent } from './app.component';
+import { TodoReducer } from './_reducers/todo.reducer';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    StoreModule.forRoot({
+      todos:TodoReducer
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
