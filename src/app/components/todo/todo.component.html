@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor = "let item of todos;let i = index">
+    {{item.title}}
+    <span class="cross-button" (click)="removeTodo(i)">x</span>
+  </li>
+</ul>
