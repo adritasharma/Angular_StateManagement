@@ -1,2 +1,5 @@
-<input #todoItem>
-<button (click)="addTodo(todoItem.value)">Add</button>
+<mat-form-field class="example-full-width">
+    <mat-label>Item</mat-label>
+    <input #todoItem matInput placeholder="Add Item">
+</mat-form-field>
+<button (click)="addTodo(todoItem.value)" mat-button color="accent">Add</button>

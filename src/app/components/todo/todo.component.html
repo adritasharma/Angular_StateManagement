@@ -1,6 +1,21 @@
-<ul>
+<!-- <ul>
   <li *ngFor = "let item of todos;let i = index">
     {{item.title}}
     <span class="cross-button" (click)="removeTodo(i)">x</span>
   </li>
-</ul>
+</ul> -->
+
+
+<mat-list>
+  <ng-container *ngFor="let item of todos;let i = index">
+      <mat-grid-list cols="4" rowHeight="100px">
+        <mat-grid-tile colspan="3">
+          {{item.title}}
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1">
+          <span class="cross-button" (click)="removeTodo(i)">x</span>
+        </mat-grid-tile>
+      </mat-grid-list>
+    <mat-divider></mat-divider>
+  </ng-container>
+</mat-list>
